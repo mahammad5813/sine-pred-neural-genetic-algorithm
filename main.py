@@ -7,7 +7,6 @@ import math
 from plot_funcs import plot_the_best, plot_func, plot_bunch_nn
 
 
-
 def test_func(inputs: tuple) -> int:
     x = inputs[0]
 
@@ -16,7 +15,6 @@ def test_func(inputs: tuple) -> int:
 def fitness(true, pred):
     return sum(1/(1+abs(true[i]-pred[i])) for i in range(len(true)))
     
-
 def normalize(value, min, max):
     return (value - min)/(max-min)
 
@@ -25,6 +23,7 @@ def evaluate_fitness(nn: NN, dataset):
     return score
 
 def main():
+    
     data_min = 0
     data_max = 6
 
