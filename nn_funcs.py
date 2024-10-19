@@ -19,7 +19,7 @@ array_tweak = np.vectorize(tweak)
 
 def select_parent(pop):
 
-    rand_num = random.uniform(0,1)
+    rand_num = random.uniform(0,sum([x.score for x in pop]))
     running_sum = 0
 
     for nn in pop:
